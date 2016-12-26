@@ -1,0 +1,91 @@
+/*DISPLAY Y MODELO DE CAJAS*/
+
+.cuadrado {
+
+	height: 40px;
+	width:100px;            /*Que le ponga un ancho fijo no significa que sea de linea, sigue siendo de bloque, aunque no lo use lo reserva */
+	background: red;
+	border: 2px solid black;
+	display: inline-block;
+	margin:10px;
+	margin-top: 10px;
+	margin-left: 30px;
+	margin-right: 35px;
+	margin-bottom: 25px;
+	color:white;
+	padding:20px;
+	margin: 10px 30px 25px 35px; /*Esto tiene todos los margenes Nunca es parte del elemento siempre va por afuera*/
+	margin:30px 50px; /*Siempre y cuando los margenes de arriba y abajo sean iguales*/
+	box-sizing:border-box; /*En vez del padding sumarse al tamaño se lo toma del original y se los resto a su tamaño original*/
+}
+
+a{
+
+	display: inline; /*Todos los links uno al lado del otro*/
+}
+
+ul li {
+
+	    display: inline; /* Para poner los items de la lista uno al lado del otro */
+}
+
+.elementos li:nth-child(2){ /* Modifico un elemento en particular en este caso el elemento numero 2*/
+
+
+	display: none;
+}
+
+
+/*POSITION 2*/
+
+.cuadrado2 {
+
+	height: 200px;
+	width:200px;
+	margin:10px;
+	background:blue;
+	display: inline-block; /*Para que no desaparezcan los elementos de bloque*/
+}
+
+.relativo {
+
+	  background:red;
+	  top: 70px;
+	  left:40px;
+	  position:relative;
+}
+
+.fijo {
+          background:yellow;
+          position:fixed;
+          top:0;
+          left:0;
+
+
+}
+.absoluto {
+
+           background:green;
+          position:absolute;
+          z-index: 9;
+          top:0;
+          left:0;   
+}
+
+/*FLOTAR ELEMENTOS Para empujar los elementos de un lado de la pantalla u otro*/ 
+
+.cuadrado3 {
+
+                   height:100px;
+                   width:100px;
+                   margin:10px;
+                   background: yellow;
+                   float:left; /*Te va poniendo los elementos a la izquierda - automaticamente lo saca de estado de bloque. Los float se sale del padre y el padre le que queda 0 de altura, pero si al padre le pones overflow:auto vuelvo a medir a los hijos y el padre no desaparece*/
+}
+
+
+/*
+    height: 300px;   Para centrar en el medio
+    width: 600px;
+    margin: auto;
+*/
